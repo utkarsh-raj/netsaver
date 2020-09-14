@@ -1,11 +1,12 @@
 const puppeteer = require('puppeteer');
+const express = require('express');
 const cron = require('node-cron');
+
+const app = express();
 
 function test() {
 	async function session() {
 		const browser = await puppeteer.launch({
-			headless: false,
-			executablePath: '/usr/bin/google-chrome',
 			args: ['--no-sandbox', '--use-fake-ui-for-media-stream']
 		});
 		const page = await browser.newPage();
@@ -54,4 +55,13 @@ function test() {
 }
 
 // cron.schedule('30 9 * * 1-5', () => {test();})
-test();
+app.get('/hello', (req, res) => {
+	console.log('The hello route has started');
+	test();
+})
+
+var port = process.env.PORT || 8000;
+
+app.listen(port, process.env.IP, function (req, res) {
+    console.log("The Backend Service has started!");
+});
