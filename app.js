@@ -10,7 +10,7 @@ function test() {
 		});
 		const page = await browser.newPage();
 
-		await page.goto('https://meetingsapac47.webex.com/meet/pr1657319592', {waitUntil: 'networkidle2'});
+		await page.goto('https://iiitnr.webex.com/iiitnr/j.php?MTID=m1b852dcb691a5506f4b38165ae5e9112', {waitUntil: 'networkidle2'});
 
 		await page.waitForSelector('#smartJoinButton');
 		await page.click('#smartJoinButton');
@@ -28,9 +28,9 @@ function test() {
 		}
 
 
-		await page.keyboard.type('Utkarsh', {delay: 200})
+		await page.keyboard.type('Pushpak', {delay: 200})
 		await page.keyboard.press('Tab')
-		await page.keyboard.type('test@gmail.com', {delay: 200})
+		await page.keyboard.type('pushpak@iiitnr.edu.in', {delay: 200})
 		await page.keyboard.press('Tab')
 		await page.keyboard.press('Enter')
 		// setTimeout(() => {console.log('Waiting for nav')}, 5000)
@@ -53,5 +53,5 @@ function test() {
 	session();
 }
 
-cron.schedule('30 9 * * 1-5', () => {test();})
-// test();
+// cron.schedule('30 9 * * 1-5', () => {test();})
+test();
