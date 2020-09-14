@@ -58,7 +58,7 @@ function test() {
 app.get('/hello', (req, res) => {
 	console.log('The hello route has started');
 	test();
-	res.json({"message": "The test function is running"});
+	res.json({"message": "The function is running"});
 })
 
 var port = process.env.PORT || 8000;
