@@ -98,7 +98,7 @@ app.post('/joinSession', (req, res) => {
 	res.render("joined");
 })
 
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
 	res.render("index");
 })
 
