@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NetSaver</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@600&family=Rubik:wght@500&display=swap" rel="stylesheet">
+        <style type="text/css">
+            .form {
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: 'Rubik', sans-serif;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: 'Rubik', sans-serif;
+            }
+
+            #footnote {
+                text-align: center;
+                margin-top: 10%;
+                margin-bottom: 3%;
+            }
+
+            #main {
+                text-align: left;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="jumbotron">
+                <h1 id="main">Netsaver</h1>
+            
+                <p>
+                    Proxy your class and save your Internet data!
+                </p>
+
+            </div>
+        </div>
+
+        <p style="text-align: center;"><strong>[Testing Phase] Important!</strong> Before joining, make sure the Join Meeting Button is enabled. Join 1-2 minutes after the start time to have a comfortable margin.</p>
+
+
+
+
+        <h1>Let's get your details!</h1>
+        <br>
+
+        <form class="container" action="joinSession" method="POST">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Name: </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email ID: </label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Institute Email ID">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="duration" class="col-sm-2 control-label">Duration (in seconds): </label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="duration" name="duration" placeholder="Duration in seconds">
+                </div>
+              </div>
+              <label for="id" class="col-sm-2 control-label">Meeting ID: </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="id" name="id" placeholder="Meeting ID">
+                </div>
+              </div>
+              <hr>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-lg btn-success">Let's Go!</button>
+                </div>
+              </div>
+        </form>
+
+        <div class="container" id="footnote">
+            <hr>
+            Made with Web Technologies and <i class="fas fa-heart"></i> by <a href="https://twitter.com/wittier_than_me"><i class="fab fa-twitter"></i>Utkarsh</a>
+            <br>
+            Get the code on <i class="fab fa-github"></i> <a href="http://www.github.com/utkarsh-raj">GitHub</a>
+        </div>
+
+
+    </body>
+</html>
