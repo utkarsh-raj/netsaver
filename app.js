@@ -36,7 +36,7 @@ function test() {
 			await page.keyboard.press('Enter')
 			await page.waitFor(10000)
 			await page.keyboard.press('Enter')
-			setTimeout(() => {}, 60000*60)
+			await page.waitFor(60*60*1000)
 			await page.close()
 		}
 		catch {
